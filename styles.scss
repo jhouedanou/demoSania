@@ -1,0 +1,467 @@
+// Variables
+$font-inter: "Inter", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$color-primary: #ed1c24;
+$color-secondary: #ffa500;
+$color-white: #ffffff;
+$color-black: #1c1c1c;
+$color-gray: #4a4a4a;
+$color-light-gray: #f0f0f0;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+    transition: $property $duration $timing;
+}
+
+// Styles généraux
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    font-family: $font-inter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-montserrat;
+}
+
+// Header
+#header {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: rgba($color-black, 0.8);
+    color: $color-white;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .button.is-primary.is-light {
+        background-color: transparent;
+        border: none;
+        color: $color-white;
+
+        &:hover {
+            background-color: rgba($color-white, 0.1);
+        }
+    }
+}
+
+// Social links
+.social-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    a {
+        color: $color-white;
+        margin-right: 15px;
+        @include transition(background-color);
+        @include flex-center;
+        height: 37px;
+        width: 37px;
+        background-color: #db0000;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: #ff0000;
+        }
+    }
+}
+
+// Newsletter
+.newsletter-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#newsletter-popup {
+    position: relative;
+    background: $color-white;
+    padding: 30px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba($color-black, 0.1);
+
+    .title {
+        color: $color-black;
+        margin-bottom: 20px;
+    }
+
+    .label {
+        color: $color-gray;
+    }
+
+    .button.is-primary {
+        background-color: $color-black;
+        @include transition(background-color);
+
+        &:hover {
+            background-color: #3273dc;
+        }
+    }
+}
+
+// Logo wrapper
+#logowrapper {
+    height: 131px;
+    width: 100%;
+    background-color: rgba($color-white, 0.9);
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+    }
+
+    .write-us-button {
+        width: 181px;
+        height: 64px;
+        background-color: #db0302;
+        color: $color-white;
+        border: none;
+        border-radius: 32px;
+        font-size: 16px;
+        cursor: pointer;
+        @include flex-center;
+        @include transition(background-color);
+
+        &:hover {
+            background-color: #ff0000;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+// Hero section
+.hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url("https://source.unsplash.com/random/1920x1080/?artificial-intelligence");
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($color-black, 0.5);
+    }
+}
+
+// Navigation styles
+.nav-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 1em;
+    z-index: 10;
+    .nav-left {
+        background: $color-primary;
+        display: flex;
+    }
+}
+
+.nav-item {
+    padding: 25px 30px;
+    color: $color-white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    &:hover {
+        color: #ffa500 !important;
+    }
+}
+
+.contact-btn {
+    background-color: $color-secondary;
+    @include flex-center;
+    padding: 0 20px;
+    i {
+        color: white;
+        background-color: $color-primary;
+        padding: 1em;
+        font-size: 1em;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    #girl {
+        line-height: 1;
+        span {
+            margin-left: 1em;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: "Montserrat";
+            font-weight: 600;
+            color: white;
+            display: block;
+        }
+    }
+}
+
+.phone-icon {
+    width: 20px;
+    height: 20px;
+    background-color: $color-white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* SANIA Certified ISO styles */
+.certified-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: $color-light-gray;
+}
+
+.certified-left {
+    width: 60%;
+}
+
+.certified-right {
+    width: 35%;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 20px;
+}
+
+.sania {
+    color: $color-primary;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    background-color: $color-secondary;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.button {
+    background-color: $color-secondary;
+    color: $color-white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($color-secondary, 10%);
+    }
+}
+
+/* Qui sommes nous styles */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.about-left {
+    width: 30%;
+}
+
+.about-right {
+    width: 65%;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: $color-black;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    background-color: $color-primary;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.stat-label {
+    color: $color-gray;
+}
+
+/* Nos actions RSE styles */
+.rse-section {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 20px;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.action-card {
+    width: 22%;
+    background-color: $color-white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.action-image {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+}
+
+.action-content {
+    padding: 15px;
+    color: $color-black;
+}
+
+.action-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.impact-section {
+    display: flex;
+    align-items: center;
+}
+
+.impact-text {
+    width: 60%;
+}
+
+.impact-image {
+    width: 35%;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+// Slider section
+.slider {
+    background-image: url("img/concert-4768496_1920.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .slider-content {
+        max-width: 68vw;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .cartouche {
+        font-style: italic;
+        font-size: 1em;
+        color: $color-white;
+    }
+
+    h1.titre {
+        font-size: 3em;
+        font-weight: bold;
+        color: $color-white; // Added this line to make h1.titre white
+    }
+}
+
+// Media queries
+@media screen and (max-width: 768px) {
+    #header,
+    #logowrapper {
+        height: auto;
+        padding: 10px;
+    }
+
+    #logowrapper {
+        .container {
+            flex-direction: column;
+        }
+
+        .write-us-button {
+            margin-top: 10px;
+        }
+    }
+
+    .slider .titre {
+        font-size: 2rem;
+    }
+}
+
+// New styles for .btnlire
+.btnlire {
+    background-color: $color-primary;
+    padding: 1em;
+    color: $color-white;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($color-primary, 10%);
+    }
+}

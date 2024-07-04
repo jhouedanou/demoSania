@@ -1,0 +1,407 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+#header {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: rgba(28, 28, 28, 0.8);
+  color: #ffffff;
+}
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#header .button.is-primary.is-light {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+}
+#header .button.is-primary.is-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.social-links a {
+  color: #ffffff;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 37px;
+  width: 37px;
+  background-color: #db0000;
+  border-radius: 50%;
+}
+.social-links a:hover {
+  background-color: #ff0000;
+}
+
+.newsletter-button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#newsletter-popup {
+  position: relative;
+  background: #ffffff;
+  padding: 30px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(28, 28, 28, 0.1);
+}
+#newsletter-popup .title {
+  color: #1c1c1c;
+  margin-bottom: 20px;
+}
+#newsletter-popup .label {
+  color: #4a4a4a;
+}
+#newsletter-popup .button.is-primary {
+  background-color: #1c1c1c;
+  transition: background-color 0.3s ease;
+}
+#newsletter-popup .button.is-primary:hover {
+  background-color: #3273dc;
+}
+
+#logowrapper {
+  height: 131px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+}
+#logowrapper .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+}
+#logowrapper .write-us-button {
+  width: 181px;
+  height: 64px;
+  background-color: #db0302;
+  color: #ffffff;
+  border: none;
+  border-radius: 32px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+#logowrapper .write-us-button:hover {
+  background-color: #ff0000;
+}
+#logowrapper .write-us-button i {
+  margin-right: 10px;
+}
+
+.hero-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://source.unsplash.com/random/1920x1080/?artificial-intelligence");
+  background-size: cover;
+  background-position: center;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(28, 28, 28, 0.5);
+}
+
+.nav-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 0 1em;
+  z-index: 10;
+}
+.nav-container .nav-left {
+  background: #ed1c24;
+  display: flex;
+}
+
+.nav-item {
+  padding: 25px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+.nav-item:hover {
+  color: #ffa500 !important;
+}
+
+.contact-btn {
+  background-color: #ffa500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+.contact-btn i {
+  color: white;
+  background-color: #ed1c24;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.contact-btn #girl {
+  line-height: 1;
+}
+.contact-btn #girl span {
+  margin-left: 1em;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: white;
+  display: block;
+}
+
+.phone-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* SANIA Certified ISO styles */
+.certified-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.certified-left {
+  width: 60%;
+}
+
+.certified-right {
+  width: 35%;
+  background-color: #ed1c24;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.sania {
+  color: #ed1c24;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-color: #ffa500;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.button {
+  background-color: #ffa500;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #cc8400;
+}
+
+/* Qui sommes nous styles */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.about-left {
+  width: 30%;
+}
+
+.about-right {
+  width: 65%;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1c1c1c;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #ed1c24;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.stat-label {
+  color: #4a4a4a;
+}
+
+/* Nos actions RSE styles */
+.rse-section {
+  background-color: #ed1c24;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.action-card {
+  width: 22%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.action-image {
+  width: 100%;
+  height: 150px;
+  background-color: #ddd;
+}
+
+.action-content {
+  padding: 15px;
+  color: #1c1c1c;
+}
+
+.action-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.impact-section {
+  display: flex;
+  align-items: center;
+}
+
+.impact-text {
+  width: 60%;
+}
+
+.impact-image {
+  width: 35%;
+  height: 200px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.slider {
+  background-image: url("img/concert-4768496_1920.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slider .slider-content {
+  max-width: 68vw;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.slider .cartouche {
+  font-style: italic;
+  font-size: 1em;
+  color: #ffffff;
+}
+.slider h1.titre {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  #header,
+  #logowrapper {
+    height: auto;
+    padding: 10px;
+  }
+  #logowrapper .container {
+    flex-direction: column;
+  }
+  #logowrapper .write-us-button {
+    margin-top: 10px;
+  }
+  .slider .titre {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
